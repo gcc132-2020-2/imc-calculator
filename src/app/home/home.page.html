@@ -6,16 +6,16 @@
 
 <ion-content>
   <ion-fab vertical="top" horizontal="end" edge slot="fixed">
-    <ion-fab-button (click)="showMessage()">
+    <ion-fab-button (click)="onCalculate()">
       <ion-icon name="calculator"></ion-icon>
     </ion-fab-button>
   </ion-fab>
   <ion-item>
     <ion-label position="floating">Peso (kg)</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="weight"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Altura (m)</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="height"></ion-input>
   </ion-item>
 </ion-content>
