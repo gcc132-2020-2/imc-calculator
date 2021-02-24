@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-fab vertical="top" horizontal="end" edge slot="fixed">
-    <ion-fab-button (click)="onCalculate()" color="secondary">
+    <ion-fab-button (click)="onCalculate()" color="secondary" [disabled]="!isFormValid()">
       <ion-icon name="calculator"></ion-icon>
     </ion-fab-button>
   </ion-fab>
