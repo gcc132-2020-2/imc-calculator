@@ -19,10 +19,19 @@ export class HomePage {
   }
 
   async showMessage(msg: string) {
+    const previousToast = await this.toastController.getTop();
+    if (previousToast) {
+      await this.toastController.dismiss();
+    }
+
     const toast = await this.toastController.create(
       {
         message: msg,
-        duration: 3000
+        buttons: [
+          {
+            icon: 'close'
+          }
+        ]
       }
     );
     toast.present();
