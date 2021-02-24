@@ -27,6 +27,7 @@ export class HomePage {
     const toast = await this.toastController.create(
       {
         message: msg,
+        color: 'light',
         buttons: [
           {
             icon: 'close'
